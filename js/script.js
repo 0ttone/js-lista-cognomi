@@ -14,6 +14,9 @@ var surUser= prompt("inserisci cognome");
 
 //surUser = surUser.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 
+//definisco var che è la classe lista che è un array e che stamperò alla fine in html 
+//tra ul (CHIARIRE)
+var outputmyList = document.getElementsByClassName("myList")[0];
 
 //verifica lista presente 
 var surList = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
@@ -28,6 +31,14 @@ surList.push(surUser);
 surListOrdered = surList.sort();
 document.getElementById("surListOrdered").innerText = surListOrdered ;
 console.log(surListOrdered);
+
+
+//posizione umana -tentativo +1
+var position = surListOrdered.indexOf(surUser) + 1;
+document.getElementById("position").innerHTML = "la tua posizione è" + position;
+
+
+
 
 
 
