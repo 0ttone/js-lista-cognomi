@@ -7,18 +7,35 @@
 
 
 
-
+//richiedi cognome
 var surUser= prompt("inserisci cognome");
+//cambia in maiuscola la prima lettera (FALLITO) TUTTO IN COMMENTO 
+//PROVA CON INSERIMENTO SOLO CON MAIUSCOLO
+
+//surUser = surUser.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+
+
+//verifica lista presente 
 var surList = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 console.log(surList);
 
 document.getElementById("surList").innerText = surList ;
+
+//inserisci nuovo cognome nella lista
 surList.push(surUser);
 
+//ordina la lista con il nuovo cognome e stampa
+surListOrdered = surList.sort();
+document.getElementById("surListOrdered").innerText = surListOrdered ;
+console.log(surListOrdered);
 
-document.getElementById("surList").innerText = surList ;
-surList.sort()
-console.log(surList);
+
+
+
+
+
+
+
 
 
 
